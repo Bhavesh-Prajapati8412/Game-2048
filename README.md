@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+2048 React Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based implementation of the popular 2048 game built with React and Redux. Players combine tiles with the same number to reach 2048. The game features dynamic updates, score tracking, and a responsive graphical user interface.
 
-## Available Scripts
+Live Demo
 
-In the project directory, you can run:
+Try it online: https://game-2048-react.netlify.app
 
-### `npm start`
+Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4x4 Board: Default board size with two initial tiles (2 or 4).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Tile Movement: Slide tiles up, down, left, right using keyboard arrows.
 
-### `npm test`
+Tile Merging: Combine tiles with the same value to increase your score.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Score Tracking: Displays current score based on merged tiles.
 
-### `npm run build`
+Game Over & Win Conditions:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You Win! when a tile reaches 2048.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Game Over when no moves are possible.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Restart Game: Reset the board and score anytime.
 
-### `npm run eject`
+Responsive & Animated Tiles: Smooth movement of tiles for a polished GUI.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Modular Code: Components, Redux state, and utilities are cleanly separaed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![2048 Game Screenshot](Picture/pic.png)
 
-## Learn More
+Installation & Running Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+git clone https://github.com/Bhavesh-Prajapati8412/Game-2048.git
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Navigate to the project directory
 
-### Analyzing the Bundle Size
+cd Game-2048
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm install
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start the development server
 
-### Deployment
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Open http://localhost:3000
+ to view it in the browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Build for Production
+npm run build
+
+
+This will create an optimized production build in the build folder, ready to deploy.
+
+Technologies Used
+
+Frontend: React, Redux Toolkit
+
+State Management: Redux
+
+Styling: CSS
+
+Deployment: Netlify
+
+Project Structure
+src/
+├── components/       # Tile and other UI components
+├── redux/            # Redux store and slices
+├── utils/            # Game logic functions
+├── App.js            # Main React component
+├── App.css           # Styles
+└── index.js          # React entry point
+
+How It Works
+
+Board Initialization: initBoard() generates a 4x4 board with 2 random tiles (2 or 4).
+
+Tile Movement: Arrow keys trigger Redux actions that update the board using functions like moveLeft, moveRight, etc.
+
+Tile Merging: Tiles with the same value merge, updating the score.
+
+Random Tile Addition: After each move, a new tile (2 or 4) appears at a random empty spot.
+
+Game Over Check: The game ends when the player reaches 2048 or no moves are possible.
+
+Future Improvements
+
+Configurable board size (e.g., 5x5, 6x6)
+
+Undo/Redo moves feature
+
+Mobile-friendly swipe gestures
+
+Leaderboard & local storage for high scores
+
+Smooth animations for merges and moves
+
+Live Deployment
+
+This project is deployed on Netlify: https://game-2048-react.netlify.app
