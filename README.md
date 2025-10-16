@@ -31,7 +31,7 @@ Modular Code: Components, Redux state, and utilities are cleanly separaed.
 Screenshots
 
 
-![2048 Game Screenshot](Picture/pic.png)
+![2048 Game Screenshot](Picture/pic.jpg)
 
 Installation & Running Locally
 
@@ -70,19 +70,10 @@ Frontend: React, Redux Toolkit
 
 State Management: Redux
 
-Styling: CSS
-
+Style
 Deployment: Netlify
 
-Project Structure
-src/
-├── components/       # Tile and other UI components
-├── redux/            # Redux store and slices
-├── utils/            # Game logic functions
-├── App.js            # Main React component
-├── App.css           # Styles
-└── index.js          # React entry point
-
+         
 How It Works
 
 Board Initialization: initBoard() generates a 4x4 board with 2 random tiles (2 or 4).
