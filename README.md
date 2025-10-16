@@ -31,7 +31,7 @@ Modular Code: Components, Redux state, and utilities are cleanly separaed.
 Screenshots
 
 
-![2048 Game Screenshot](Picture/pic.jpg)
+![2048 Game Screenshot](Picture/Pic.jpg)
 
 Installation & Running Locally
 
